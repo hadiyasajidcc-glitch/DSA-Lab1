@@ -1,20 +1,14 @@
-#include <iostream>
+#include <vector>
 using namespace std;
 
-int main() {
-    int arr[] = { 2, 5, 2, 8, 2, 9 };
-    int n = 6;
-    int target = 2;
+vector<int> findAllIndices(const vector<int>& arr, int key) {
+    vector<int> indices;
 
-    cout << "Indices of " << target << ": ";
-
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == target) {
-            cout << i << " ";
+    for (int i = 0; i < arr.size(); i++) {
+        if (arr[i] == key) {
+            indices.push_back(i);
         }
     }
 
-    cout << endl;
-
-    return 0;
+    return indices;
 }
